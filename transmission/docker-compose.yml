@@ -1,0 +1,21 @@
+version: "2.1"
+services:
+  transmission:
+    image: linuxserver/transmission
+    container_name: transmission
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - USER=transmission
+      - PASS=transmission
+      - UMASK=0
+    volumes:
+      - /media/nvme1n1p1/transmission-daemon/config:/config
+      - /media/nvme1n1p1/transmission-daemon/downloads:/downloads
+      - /media/nvme1n1p1/transmission-daemon/watch:/watch
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+    restart: unless-stopped
+
