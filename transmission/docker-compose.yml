@@ -10,9 +10,9 @@ services:
       - PASS=transmission
       - UMASK=0
     volumes:
-      - /media/nvme1n1p1/transmission-daemon/config:/config
-      - /media/nvme1n1p1/transmission-daemon/downloads:/downloads
-      - /media/nvme1n1p1/transmission-daemon/watch:/watch
+      - /media/nvme1n1/transmission-daemon/config:/config
+      - /media/nvme1n1/transmission-daemon/downloads:/downloads
+      - /media/nvme1n1/transmission-daemon/watch:/watch
     ports:
       - 9091:9091
       - 51413:51413

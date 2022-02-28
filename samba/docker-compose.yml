@@ -6,7 +6,7 @@ services:
     volumes:
       - /media/sdb:/mount/sdb
       - /media/sdc:/mount/sdc
-      - /media/nvme1n1p1:/mount/nvme1n1p1
+      - /media/nvme1n1:/mount/nvme1n1
     environment:
       - PUID=1000
       - PGID=1000
@@ -14,7 +14,7 @@ services:
       - USER=jeffrey;1234
       - SHARE=sdb;/mount/sdb;yes;no;no;jeffrey;none;none;sdb
       - SHARE2=sdc;/mount/sdc;yes;no;no;jeffrey;none;none;sdc
-      - SHARE3=nvme1n1p1;/mount/nvme1n1p1;yes;no;no;jeffrey;none;none;nvme1n1p1
+      - SHARE3=nvme1n1;/mount/nvme1n1;yes;no;no;jeffrey;none;none;nvme1n1
       - PERMISSIONS
       - SMB
     ports:
